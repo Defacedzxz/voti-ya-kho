@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>مجمع الكهول للتصويت</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>صوت لرئيسك الذي سيقوم بتدمير بلادك مستقبلا :</h1>
+        <div class="candidates">
+            <div class="candidate" id="candidate1">
+                <img src="tbn.jpg" alt="عبد المجيد تبون">
+                <h3>عبد المجيد تبون</h3>
+                <p>عبد المجيد تبون، الرئيس الحالي للجزائر، في 17 نوفمبر 1945 بولاية النعامة.</p>
+                <button class="vote-btn" id="vote-btn1" onclick="vote('candidate1', 'vote-btn1')">صوت</button>
+            </div>
+            <div class="candidate" id="candidate2">
+                <img src="nigg.jpg" alt="عبد العالي حساني شريف">
+                <h3>عبد العالي حساني شريف</h3>
+                <p>الرئيس الحالي لحزب حركة مجتمع السلم الجزائرية، أكبر حزب إسلامي في البلاد، منذ مارس 2023.</p>
+                <button class="vote-btn" id="vote-btn2" onclick="vote('candidate2', 'vote-btn2')">صوت</button>
+            </div>
+            <div class="candidate" id="candidate3">
+                <img src="bro.jpg" alt="يوسف أوشيش">
+                <h3>يوسف أوشيش</h3>
+                <p>الأمين الوطني الأول لحزب جبهة القوى الاشتراكية المعارض ومرشح الحزب في انتخابات الرئاسة الجزائرية لعام 2024.</p>
+                <button class="vote-btn" id="vote-btn3" onclick="vote('candidate3', 'vote-btn3')">صوت</button>
+            </div>
+        </div>
+
+        <div id="vote-result" class="vote-result">
+            <h3>نتائج التصويت:</h3>
+            <p>عبد المجيد تبون: <span id="vote-candidate1">0</span> أصوات</p>
+            <p>عبد العالي حساني شريف: <span id="vote-candidate2">0</span> أصوات</p>
+            <p>يوسف أوشيش: <span id="vote-candidate3">0</span> أصوات</p>
+        </div>
+    </div>
+
+   
+<div id="thank-you-popup" class="thank-you-popup">
+    <p>شكراً لتصويتك! نتمنى لك يوماً سعيداً!</p>
+    <button id="close-popup" onclick="closePopup()">موافق</button>
+</div>
+
+
+<div id="already-voted-popup" class="thank-you-popup">
+    <p>لا، لقد قمت بالتصويت بالفعل.</p>
+    <button id="close-popup-again" onclick="closePopup()">موافق</button>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
